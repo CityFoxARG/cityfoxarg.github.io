@@ -193,3 +193,11 @@ label{
   pointer-events: none;
 }
 
+/*    RESPONSIVE
+======================*/
+@media screen and (max-width:700PX){
+  .section-nos-box {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
