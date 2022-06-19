@@ -188,30 +188,6 @@ span {
   margin: 50px 0;
 }
 
-.section-nos-box-hijo a {
-  margin-top: 30px;
-  background-color: #9017BB;
-  display: inline-block; /* Para que podamos agregarle Padding , etc */
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  font-size: 18px;
-  height: 45px;
-  width: 150px;
-  text-align: center;
-  box-shadow:  0 0px 5px 0px #9017BB;
-  border: 2px solid #9021b8;
-  transition: box-shadow 0.5s ease;
-}
-.section-nos-box-hijo a:hover {
-  box-shadow:  0 0px 12px 0px #9017BB;
-  transition: all 0.3s ease-in-out;
-}
-.section-nos-box-hijo a:active {
-  background-color: #8f17bb8a;
-}
-
 /* Formulario */
 label{
   pointer-events: none;
