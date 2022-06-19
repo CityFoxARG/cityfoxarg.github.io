@@ -176,7 +176,7 @@ span {
 
 .section-nos-box-hijo {
   display:grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto;
   justify-items: center;
 }
 
