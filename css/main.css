@@ -158,7 +158,7 @@ span {
   grid-template-columns: 1fr 1fr;
 }
 
-.section-nos-box h3, p, a {
+.section-nos-box h3, p {
   grid-column: 1;
   text-align: center;
 }
