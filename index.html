@@ -9,23 +9,21 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="shortcut icon" href="img/prog-icono.ico" type="image/x-icon">
     <title>CityFox</title>
 </head>
 <body>
     
     <!-- HEADER -->
-    <header class="header">
-        <div class="header__title">
-            <a href="index.html"><h2>CITY<span>FOX</span></h2></a>
-        </div>
-        <nav class="header-nav">
-                <ul class="header-nav__bar">
-                    <li><a href="#home">INICIO</a></li>
-                    <li><a href="#nosotros">NOSOTROS</a></li>
-                    <li><a href="#form">CONTACTOS</a></li>
-                </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <ul>
+            <li class="navbar-logo"><a href="index.html">CITY<span>FOX</span></a></li>
+            <li class="navbar-toggle"><i class="fas fa-bars" ></i></li>
+            <li class="navbar-links"><a href="#home">INICIO</a></li>
+            <li class="navbar-links"><a href="#nosotros">NOSOTROS</a></li>
+            <li class="navbar-links"><a href="#form">CONTACTO</a></li>
+            </ul>
+    </nav>
 
     <!-- INICIO -->
     <section id="home" class="home">
@@ -34,9 +32,10 @@
             <p class="main-container__text">
                 DISEÑAMOS TU EXITO EN LA WEB
             </p>
-            <a class="main-container__buttom" href="">CONTACTO</a>
+            <a class="main-container__buttom" href="#form">CONTACTO</a>
         </div>
     </section>
+    <hr>
 
     <!-- SOBRE NOSOTROS -->
 
@@ -48,7 +47,6 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas commodi est id laboriosam unde illum reprehenderit assumenda consectetur beatae odit molestias, velit optio repudiandae. Quae asperiores ipsa cumque facere totam.
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates numquam libero ex nobis minima molestias sed rem illum, ratione suscipit non atque itaque nulla, expedita at incidunt, dolorem similique necessitatibus?
                 </p>
-                <a href="">CONTACTO</a>
             </div>
             <div class="section-nos-box__img">
                 <img src="img/comp.png" alt="Imagen computadora">
@@ -57,6 +55,7 @@
     </section>
 
     <!-- Cards-->
+    <h3 class="cards-title">PAGINAS REALIZADAS</h3>
     <div class="cards">
         <div class="card card1">
             <div class="containerr">
@@ -65,7 +64,7 @@
             <div class="details">
                 <h3>Elizonm Remodeling</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
-                <a class="details-contact" href="">Ver Sitio</a>
+                <a class="details-contact" href="https://elizonmremodeling.com/" target="_blank">Ver Sitio</a>
             </div>
         </div>
         <div class="card card2">
@@ -75,7 +74,7 @@
             <div class="details">
                 <h3>Huasteca a la Aventura</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
-                <a class="details-contact" href="">Ver Sitio</a>
+                <a class="details-contact" href="https://huastecaalaaventura.com.mx/" target="_blank">Ver Sitio</a>
             </div>
         </div>
         <div class="card card3">
@@ -85,55 +84,41 @@
             <div class="details">
                 <h3>Piel de Cuero</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dignissimos, minus aperiam adipisci exercitationem.</p>
-                <a class="details-contact" href="">Ver Sitio</a>
+                <a class="details-contact" href="https://www.pieldecuero.com.ar/" target="_blank">Ver Sitio</a>
             </div>
         </div>
     </div>
-    <!--<section class="section-nos-2">
-        <div>
-            <h3>Contanos tu idea y te aseguramos</h3>
-            <p>
-                Charlemos sobre tu proyecto, te asesoramos y cerramos un presupuesto en el acto.
-            </p>
-            <a href="">CHATEA CON UN DISEÑADOR</a>
-        </div>
-    </section> -->
 
+    <!-- FORMULARIO -->
+    
     <section class="section-form">
-        
-        <!--<div>
-            <p>
-                Con creatividad y tecnologia ayudanos a tu empresa a crecer en la era digital.
-            </p>
-            <h4>REDES SOCIALES</h4>
-            <a href=""><i class="fa-brands fa-whatsapp-square"></i></a>
-            <a href=""><i class="fa-brands fa-instagram-square"></i></a>
-            <a href=""><i class="fa-brands fa-facebook-square"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            
-        </div>-->
         <div id="form" class="content-form">
-            <form class="form" action="">
+            <form class="form" id="form-contacto" action="https://formsubmit.co/25dc40d8eb220c857a332a797ece0b22" method="POST">
                 <div class="form-header">
                     <h1 class="form-title"><Span>C</Span>ontacto</h1>
                 </div>
-
-                <label for="nombre" class="form-label" id="form-label-nombre">Nombre</label>
-                <label for="apellido" class="form-label" id="form-label-apellido"> Apellido</label>
-                <input type="text"  id="nombre" class="form-input" placeholder="Ingrese Su Nombre" required >
-                <input type="text" id="apellido" class="form-input" placeholder="Ingrese Su Apellido">
+                <div class="form-doble">
+                    <label for="nombre" class="form-label" id="form-label-nombre">Nombre</label>
+                    <label for="apellido" class="form-label" id="form-label-apellido"> Apellido</label>
+                    <input type="text"  id="nombre" class="form-input" placeholder="Ingrese Su Nombre" name="Nombre" required>
+                    <input type="text" id="apellido" class="form-input" placeholder="Ingrese Su Apellido" name="Apellido" required>
+                </div>
 
                 <label for="apellido" class="form-label"> Tema</label>
-                <input type="text" id="tema" class="form-input" placeholder="Ingrese Tema de charla">
+                <input type="text" id="tema" class="form-input" placeholder="Ingrese Tema de charla" name="_subject">
 
                 <label for="apellido" class="form-label"> E-Mail</label>
-                <input type="email" id="email" class="form-input" placeholder="Ingrese Su E-Mail">
+                <input type="email" id="email" class="form-input" placeholder="Ingrese Su E-Mail" name="email">
 
                 <label for="mensaje" id="mensaje" class="form-label">Mensaje </label>
-                <textarea id="nebsahe " class="form-textarea" placeholder="Aqui escriba su mensaje "></textarea>
-
+                <textarea id="nebsahe " class="form-textarea" placeholder="Aqui escriba su mensaje " name="Mensaje"></textarea>
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
                 <input type="submit"  class="btn-submit" value="Enviar">
+                <div id="form-status"></div>
             </form>
+
+            
         </div>
     </section>
 
@@ -152,6 +137,9 @@
             </div>
         </div>
     </footer>
+    <script src="js/scriptForm.js"></script>
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
 
