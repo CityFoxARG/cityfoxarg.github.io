@@ -27,74 +27,76 @@ body {
 }
 /*    HEADER
 ====================== */
-.header {
-  background-color: black;
-  position: fixed;
-  z-index: 100; /* Se pone encima de todos los elementos */ 
-  color: white;
+.navbar {
   width: 100%;
-  height: 60px;
-  display: grid; /* Separa automaticamente en filas (o columnas) */
-  grid-template-columns: 1fr 1fr; /* Cuantas Filas? Mientras mas fragmentos mas columnas */
-  /* grid-template-columns: 1fr auto auto;  Cuantas columnas? */
+  z-index: 1000;
+  position: fixed;
 }
 
-.header__title {
-  width: auto;
-  height: auto;
-  display: flex; /* Activa Flex-Box --> Para usar sus propiedades */
-  align-items: center; /* Los centra en el contenedor verticalmente */
-  justify-self: flex-start; /* Posiciona horizontalmente (end -> al final) */
-  margin-left: 30px;
-}
-
-.header__title a {
-  text-decoration: none;
-  color: #fff;
-}
-
-span {
-  color: #9017BB;
-}
-
-.header-nav {
-  display: flex;
+.navbar ul{
+  display:flex;
+  width: 100%;
   align-items: center;
-  justify-self: end;
-  margin-right: 30px;
-  justify-content: space-between;
-}
-
-.header-nav__bar {
-  list-style: none;
-  display: inline-flex;
-}
-
-.header-nav__bar a {
+  background-color: #000;
   color: #fff;
-  text-decoration: none;
-  padding: 10px;
+}
+
+.navbar li{
+  list-style-type: none;
+  padding: 1rem;
   font-weight: bold;
 }
 
-.header-nav__bar a:hover {
+.navbar a{
+  text-decoration: none;
+  color:#fff;
+
+}
+
+.navbar-logo{
+  flex:1;
+  font-size: 1.5rem;
+  user-select: none;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+span{
   color: #9017BB;
+}
+.navbar-toggle{
+  font-size: 30px;
+  display: none;
+}
+
+.navbar-links:hover a{
+
+  color:#9017BB;
+}
+
+@media (max-width: 600px){
+  .navbar ul{
+      flex-wrap: wrap;
+  }
+  .navbar-toggle{
+      display:block;
+  }
+  .navbar-links{
+      display:none;
+      width:100%;
+      text-align: center;
+  }
+  .active{
+  display: block;
+  }
 }
 
 /*    INICIO
 ====================== */
-video {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
+
 .home {
   background-image: url(../img/Fondo-Logo.svg);
   background-size: cover;
-  background-position: center;
   width: 100%;
   height: 100vh;
   display:grid;
@@ -152,6 +154,10 @@ video {
   background-color: #8f17bb8a;
 }
 
+hr {
+  border: 0.5px solid #9021bb;
+}
+
 /*    SOBRE NOSOTROS
 =========================== */
 .section-nos {
@@ -166,7 +172,7 @@ video {
   grid-template-columns: 1fr 1fr;
 }
 
-.section-nos-box h3, p, a {
+.section-nos-box h3, p {
   grid-column: 1;
   text-align: center;
 }
@@ -184,7 +190,7 @@ video {
 
 .section-nos-box-hijo {
   display:grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto;
   justify-items: center;
 }
 
@@ -196,32 +202,57 @@ video {
   margin: 50px 0;
 }
 
-.section-nos-box-hijo a {
-  margin-top: 30px;
-  background-color: #9017BB;
-  display: inline-block; /* Para que podamos agregarle Padding , etc */
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  font-size: 18px;
-  height: 45px;
-  width: 150px;
-  text-align: center;
-  box-shadow:  0 0px 5px 0px #9017BB;
-  border: 2px solid #9021b8;
-  transition: box-shadow 0.5s ease;
-}
-.section-nos-box-hijo a:hover {
-  box-shadow:  0 0px 12px 0px #9017BB;
-  transition: all 0.3s ease-in-out;
-}
-.section-nos-box-hijo a:active {
-  background-color: #8f17bb8a;
-}
-
 /* Formulario */
 label{
   pointer-events: none;
 }
+#form-status{
+  text-align: center;
+  width:auto;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: none;
+}
+.form-success{
+  display: block !important;
+  background-color: rgb(6, 144, 38);
+}
+.form-fail{
+  display: block !important;
+  background-color: rgb(137, 22, 22);
+}
+/*    RESPONSIVE
+======================*/
+@media screen and (max-width:700px){
+  .section-nos-box {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
+  .content-form {
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width:539px) {
+  .form-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #nombre { 
+    width:100% !important; 
+  }
+
+  #apellido { 
+    margin-left:7px;
+    width:100% !important;
+  }
+
+  #form-label-apellido {
+    margin-left: 7px;
+    text-align: start !important;
+  }
+}
