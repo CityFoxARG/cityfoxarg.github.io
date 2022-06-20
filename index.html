@@ -9,23 +9,21 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="shortcut icon" href="img/prog-icono.ico" type="image/x-icon">
     <title>CityFox</title>
 </head>
 <body>
     
     <!-- HEADER -->
-    <header class="header">
-        <div class="header__title">
-            <a href="index.html"><h2>CITY<span>FOX</span></h2></a>
-        </div>
-        <nav class="header-nav">
-                <ul class="header-nav__bar">
-                    <li><a href="#home">INICIO</a></li>
-                    <li><a href="#nosotros">NOSOTROS</a></li>
-                    <li><a href="#form">CONTACTOS</a></li>
-                </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <ul>
+            <li class="navbar-logo"><a href="index.html">CITY<span>FOX</span></a></li>
+            <li class="navbar-toggle"><i class="fas fa-bars" ></i></li>
+            <li class="navbar-links"><a href="#home">INICIO</a></li>
+            <li class="navbar-links"><a href="#nosotros">NOSOTROS</a></li>
+            <li class="navbar-links"><a href="#form">CONTACTO</a></li>
+            </ul>
+    </nav>
 
     <!-- INICIO -->
     <section id="home" class="home">
@@ -34,9 +32,10 @@
             <p class="main-container__text">
                 DISEÑAMOS TU EXITO EN LA WEB
             </p>
-            <a class="main-container__buttom" href="">CONTACTO</a>
+            <a class="main-container__buttom" href="#form">CONTACTO</a>
         </div>
     </section>
+    <hr>
 
     <!-- SOBRE NOSOTROS -->
 
@@ -56,6 +55,7 @@
     </section>
 
     <!-- Cards-->
+    <h3 class="cards-title">PAGINAS REALIZADAS</h3>
     <div class="cards">
         <div class="card card1">
             <div class="containerr">
@@ -134,6 +134,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
 
