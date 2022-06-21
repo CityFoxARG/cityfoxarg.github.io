@@ -258,21 +258,20 @@ label{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
 @media screen and (max-height:350px) {
   #home{
     height: auto;
   }
-  #nombre { 
-    width:100% !important; 
-  }
-
-  #apellido { 
-    margin-left:7px;
-    width:100% !important;
-  }
-
-  #form-label-apellido {
-    margin-left: 7px;
-    text-align: start !important;
-  }
+}
+#nombre { 
+  width:100% !important; 
+}
+#apellido { 
+  margin-left:7px;
+  width:100% !important;
+}
+#form-label-apellido {
+  margin-left: 7px;
+  text-align: start !important;
 }
