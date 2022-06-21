@@ -39,7 +39,7 @@
 
     <!-- SOBRE NOSOTROS -->
 
-    <section id="nosotros" class="section-nos">
+    <section class="section-nos">
         <div class="section-nos-box">
             <div class="section-nos-box-hijo">
                 <h3 class="section-nos-box__title">SOBRE NOSOTROS</h3>
@@ -90,32 +90,35 @@
     </div>
 
     <!-- FORMULARIO -->
-
+    
     <section class="section-form">
         <div id="form" class="content-form">
-            <form class="form" action="">
+            <form class="form" id="form-contacto" action="https://formsubmit.co/25dc40d8eb220c857a332a797ece0b22" method="POST">
                 <div class="form-header">
                     <h1 class="form-title"><Span>C</Span>ontacto</h1>
                 </div>
-
                 <div class="form-doble">
                     <label for="nombre" class="form-label" id="form-label-nombre">Nombre</label>
                     <label for="apellido" class="form-label" id="form-label-apellido"> Apellido</label>
-                    <input type="text"  id="nombre" class="form-input" placeholder="Ingrese Su Nombre" required >
-                    <input type="text" id="apellido" class="form-input" placeholder="Ingrese Su Apellido">
+                    <input type="text"  id="nombre" class="form-input" placeholder="Ingrese Su Nombre" name="Nombre" required>
+                    <input type="text" id="apellido" class="form-input" placeholder="Ingrese Su Apellido" name="Apellido" required>
                 </div>
 
                 <label for="apellido" class="form-label"> Tema</label>
-                <input type="text" id="tema" class="form-input" placeholder="Ingrese Tema de charla">
+                <input type="text" id="tema" class="form-input" placeholder="Ingrese Tema de charla" name="_subject">
 
                 <label for="apellido" class="form-label"> E-Mail</label>
-                <input type="email" id="email" class="form-input" placeholder="Ingrese Su E-Mail">
+                <input type="email" id="email" class="form-input" placeholder="Ingrese Su E-Mail" name="email">
 
                 <label for="mensaje" id="mensaje" class="form-label">Mensaje </label>
-                <textarea id="nebsahe " class="form-textarea" placeholder="Aqui escriba su mensaje "></textarea>
-
+                <textarea id="nebsahe " class="form-textarea" placeholder="Aqui escriba su mensaje " name="Mensaje"></textarea>
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
                 <input type="submit"  class="btn-submit" value="Enviar">
+                <div id="form-status"></div>
             </form>
+
+            
         </div>
     </section>
 
@@ -126,15 +129,17 @@
                     <h4>CITY<span>FOX</span></h4>
                 </div>
                 <div class="redes-social__icons">
-                    <a href=""><img src="img/whatsapp.png" alt=""></a>
-                    <a href=""><img src="img/instagram.png" alt=""></a>
-                    <a href=""><img src="img/facebook.png" alt=""></a>
-                    <a href=""><img src="img/twitter.png" alt=""></a>
+                    <a target="_blank" href="#"><img src="img/whatsapp.png" alt=""></a>
+                    <a target="_blank" href="https://www.instagram.com/cityfox.ar/"><img src="img/instagram.png" alt=""></a>
+                    <a target="_blank" href="https://www.facebook.com/Cityfox-100102459048841"><img src="img/facebook.png" alt=""></a>
+                    <a target="_blank" href="https://twitter.com/agenciacityfox"><img src="img/twitter.png" alt=""></a>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="js/scriptForm.js"></script>
     <script src="js/script.js"></script>
+    
 </body>
 </html>
 

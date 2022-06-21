@@ -96,6 +96,7 @@ span{
 
 .home {
   background-image: url(../img/Fondo-Logo.svg);
+  background-attachment: fixed;
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -206,7 +207,24 @@ hr {
 label{
   pointer-events: none;
 }
-
+#form-status{
+  text-align: center;
+  width:auto;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: none;
+}
+.form-success{
+  display: block !important;
+  background-color: #069026;
+  font-weight: bold;
+}
+.form-fail{
+  display: block !important;
+  background-color: #891616;
+}
 /*    RESPONSIVE
 ======================*/
 @media screen and (max-width:700px){
@@ -217,6 +235,21 @@ label{
 
   .content-form {
     margin: 0 50px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .home {
+    background-image: url(../img/cel-logo.svg);
+    grid-template-columns: 1fr 1fr 1fr;
+    background-position: center;
+  }
+  .main-container {
+    grid-column: 2;
+  }
+  .main-container__title {
+    align-items: flex-end;
+    margin-bottom: 100px;
   }
 }
 
