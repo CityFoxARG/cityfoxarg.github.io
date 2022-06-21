@@ -162,6 +162,8 @@ hr {
 /*    SOBRE NOSOTROS
 =========================== */
 .section-nos {
+  position: relative;
+  margin-top: 1px;
   background-color: #000000;
   width: 100%;
   color: #fff;
