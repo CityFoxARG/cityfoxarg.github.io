@@ -62,7 +62,7 @@ body {
 }
 
 span{
-  color: #9017BB;
+  color: #ff4800;
 }
 .navbar-toggle{
   font-size: 30px;
@@ -98,7 +98,7 @@ span{
   background-image: url(../img/Fondo-Logo.svg);
   background-attachment: fixed;
   background-size: cover;
-  width: 100vw;
+  width: auto;
   height: 100vh;
   display:grid;
   grid-template-columns: 1fr 1fr;
